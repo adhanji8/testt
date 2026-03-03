@@ -7,15 +7,15 @@ app.set("view engine", "ejs");
 
 const isProd = process.env.NODE_ENV === "prod";
 
-if (isProd) {
-  app.set("views", path.join(import.meta.dirname, "views"));
-} else {
-  app.set("views", path.join(import.meta.dirname, "..", "dist", "views"));
-}
-app.use(express.static(path.join(import.meta.dirname, "public")));
+// if (isProd) {
+//   app.set("views", path.join(import.meta.dirname, "views"));
+// } else {
+//   app.set("views", path.join(import.meta.dirname, "..", "dist", "views"));
+// }
+// app.use(express.static(path.join(import.meta.dirname, "public")));
 
 app.get("/", (req, res) => {
-  res.render("index", { message: "hello bcit" });
+  res.json({ message: "hello bcit" });
 });
 
 app.listen(PORT, () => {

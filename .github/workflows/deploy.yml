@@ -41,4 +41,4 @@ jobs:
           scp -i private_key.pem -r ./dist/* $USER@$HOST:/home/ubuntu/testt/dist/
           
           # SSH to EC2 and use PM2 to run the compiled app.js
-          ssh -i private_key.pem $USER@$HOST "pm2 start /home/ubuntu/my-express-app/dist/app.js --name my-express-app"
+          ssh -i private_key.pem $USER@$HOST "pm2 start /home/ubuntu/testt/dist/app.js --name my-express-app"

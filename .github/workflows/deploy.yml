@@ -36,5 +36,5 @@ jobs:
         run: |
           echo "$PRIVATE_KEY" > private_key.pem
           chmod 600 private_key.pem
-          scp -i private_key.pem -r ./dist/* $USER@$HOST:/home/ubuntu/my-express-app/dist/
+          scp -i private_key.pem -r ./dist/* $USER@$HOST:/home/ubuntu/testt/dist/
           ssh -i private_key.pem $USER@$HOST "pm2 reload src/app.ts --interpreter=tsx"
